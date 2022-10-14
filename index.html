@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Public Parties</title>
+	</head>
+	<body>
+		<section id="modal-container" class="invis">
+			<section id="create-modal" class="modal invis">
+				<h2>Create Event</h2>
+				<!-- <button class="close">
+					<i class="fi fi-ss-cross-circle"></i>
+				</button> -->
+				<form action="" id="new-event-form">
+					<div class="input">
+						<div>
+							<input type="text" name="title" />
+						</div>
+						<label for="title">Title</label>
+					</div>
+					<div class="input">
+						<div>
+							<input type="text" name="location" />
+						</div>
+						<label for="location">Location</label>
+					</div>
+					<div class="input long">
+						<div>
+							<textarea name="description"></textarea>
+						</div>
+						<label for="description">Description</label>
+					</div>
+					<div class="input">
+						<div>
+							<input
+								type="text"
+								name="image"
+								placeholder="https://www.example.com/image.png"
+							/>
+						</div>
+						<label for="image">Image Url</label>
+					</div>
+					<div class="input">
+						<div>
+							<input
+								type="text"
+								name="tags"
+								placeholder="Separate tags with a ','"
+							/>
+						</div>
+						<label for="tags">Tags</label>
+					</div>
+					<div class="input short">
+						<div>
+							<input type="date" name="date" />
+						</div>
+						<label for="date">Date</label>
+					</div>
+					<div class="input short">
+						<div>
+							<input type="number" name="price" value="0" />
+						</div>
+						<label for="price">Price</label>
+					</div>
+				</form>
+				<section class="buttons">
+					<button class="cancel">
+						<span>Cancel</span>
+					</button>
+					<button id="submit-event">
+						<i class="fi fi-rr-add"></i>
+						<span>Create Event</span>
+					</button>
+				</section>
+			</section>
+		</section>
+		<header>
+			<h1>Public Parties and Events</h1>
+			<h2>
+				Find an upcoming event that you'd like to attend and mark that
+				you're interested!
+			</h2>
+			<section class="header-inputs">
+				<section class="search-section">
+					<div class="input search">
+						<div>
+							<i class="fi fi-rs-search"></i>
+							<input type="search" name="search" id="search" />
+						</div>
+						<label for="search">Search</label>
+					</div>
+					<div class="input tags">
+						<div>
+							<select name="tags" id="tags">
+								<option
+									class="default-tag"
+									value="All"
+									selected
+								>
+									All
+								</option>
+								<option value="Virtual">Virtual</option>
+								<option value="Games">Games</option>
+								<option value="Chill">Chill</option>
+							</select>
+						</div>
+						<label for="tags">Tag</label>
+					</div>
+				</section>
+				<button id="create">
+					<i class="fi fi-rr-add"></i>
+					<span>Create New Event</span>
+				</button>
+			</section>
+		</header>
+		<main>
+			<section id="events"></section>
+		</main>
+	</body>
+</html>
