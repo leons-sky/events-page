@@ -152,7 +152,7 @@ function createNewEvent(eventData) {
         </section>
         <section class="buttons">
             <div class="price"><h3>${eventData.price > 0 ? (new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' })).format(eventData.price) : "Free"}</h3></div>
-            <button class="interested">
+            <button class="interested${eventData.interested ? " is-interested" : ""}">
                 <i class="fi ${getInterestedIcon(eventData.interested)}"></i>
                 <span>Interested</span>
             </button>
